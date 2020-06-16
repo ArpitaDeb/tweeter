@@ -17,14 +17,16 @@
   border-color: gray;
   resize: none;
   width: 100%;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 15px;
-  background-color: blanchedalmond;
+  background: transparent;
+  background-color: oldlace;
   padding: 10px;
+  margin: .5em 0; 
 }
 .new-tweet form{
   padding: 20px;
-  background-color: blanchedalmond;
+  background-color: oldlace;
  
 }
 section h2 {
