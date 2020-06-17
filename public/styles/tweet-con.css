@@ -41,7 +41,7 @@ article.tweet .profile {
 
 article.tweet .sentence {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 300;
     color: gray;
 }
 
@@ -60,8 +60,18 @@ article:hover {
 
 article:hover .uname {
     display: block;
-    opacity: 0.3;
+    opacity: 1;
     color: rgba(43, 144, 226, 0.705);
 }
 
-article:hover .icons {}
+article:hover .sentence {
+    font-weight: 700;
+}
+
+article:hover .firstLastName {
+    font-weight: 700;
+}
+
+article:hover .days {
+    font-weight: 700;
+}
