@@ -5,6 +5,7 @@
  */
 $(document).ready(function() {
     const createTweetElement = function(tweetData) {
+        // to add it to the page so we can make sure it's got all the right elements, classes, etc.
         const $tweetPost = `
         <article class="tweet">
         <header>
@@ -24,37 +25,40 @@ $(document).ready(function() {
  `
         return $tweetPost;
     };
-    // Test / driver code (temporary). Eventually will get this from the server.
-
-
-    // Test / driver code (temporary)
-    // to see what it looks like
-    // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-    // Fake data taken from initial-tweets.json
-
-
+    //renderTweets
     const renderTweets = function(tweets) {
-            // loops through tweets
-            for (let element of tweets) {
-                // calls createTweetElement for each tweet
-                let $tweet = createTweetElement(element);
-                // takes return value and appends it to the tweets container
-                $("#tweets-container").prepend($tweet);
-            }
+        // loops through tweets
+        for (let element of tweets) {
+            // calls createTweetElement for each tweet
+            let $tweet = createTweetElement(element);
+            // takes return value and appends it to the tweets container
+            $("#tweets-container").prepend($tweet);
         }
-        //renderTweets(data);
+    }
 
     $('form').on('submit', (event) => {
         event.preventDefault();
+        let tweetText = $('#tweet-text').val();
+        let textLength = tweetText.length;
+        const maxMsgLen = 140;
+        if (tweetText === "" || tweetText === null) {
+            alert("Please post some message");
+        }
+        if (textLength > maxMsgLen) {
+            alert("tweet content is too long, exceeded allowed maximum message limit")
+        }
         let formData = $("form").serialize();
-        $.ajax({
-            url: "/tweets/",
-            method: "POST",
-            dataType: 'JSON',
-            data: formData
-        }).then(function(response) {
-            console.log(response);
-        });
+        if (textLength > 0 && textLength < 140) {
+            $.ajax({
+                url: "/tweets/",
+                method: "POST",
+                dataType: 'JSON',
+                data: formData
+            }).then(function(postsMessage) {
+                console.log(postsMessage);
+            });
+            alert("tweet is posted");
+        }
     })
     const loadtweets = () => {
         $.ajax({
@@ -62,7 +66,6 @@ $(document).ready(function() {
             method: "GET",
             dataType: 'JSON'
         }).then(function(tweetsresponse) {
-            console.log('success', tweetsresponse);
             renderTweets(tweetsresponse);
         })
     };
