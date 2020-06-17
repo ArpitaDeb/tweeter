@@ -17,7 +17,7 @@ $(document).ready(function() {
           <p class="sentence">${tweetData.content.text}</p>
         <footer>
           <div class="date">
-          <p class="days">${tweetData.created_at}</p>
+          <p class="days">${moment(tweetData.created_at, "").fromNow()}</p>
           </div>
         </footer>
         </article>
