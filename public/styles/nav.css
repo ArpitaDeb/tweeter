@@ -19,17 +19,23 @@ nav {
     align-items: center;
 }
 
-.iconbtn {
-    align-self: flex-end;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    margin: 0 auto 0 auto;
-    transform-origin: bottom;
+.icon span {
+    font-size: medium;
 }
 
 .iconbtn {
-    animation-name: bounce-1;
-    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin-top: 10px;
+    transform-origin: bottom;
+    animation-name: iconbtn;
+    animation-timing-function: ease-in-out;
+    color: red;
+    size: medium;
+    border-width: 20px 20px 0px 20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f00;
 }
 
 @keyframes iconbtn {
@@ -37,9 +43,13 @@ nav {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-100px);
+        transform: translateY(-10px);
     }
     100% {
         transform: translateY(0);
     }
+}
+
+.iconbtn:hover {
+    cursor: pointer;
 }

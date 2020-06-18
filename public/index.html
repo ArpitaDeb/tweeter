@@ -37,7 +37,7 @@
         <span>tweeter Arpita</span>
         <div class="icon">
             <span>Write a new tweet</span>
-            <button class="iconbtn"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+            <div class="iconbtn"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
         </div>
 
     </nav>
@@ -54,7 +54,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-            <h3>Compose Tweet</h3>
+            <div class="error-message"></div>
             <form id="formText" method="POST" action="/tweets/">
                 <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
                 <div class="formSubmit">
