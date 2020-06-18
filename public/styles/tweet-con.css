@@ -24,7 +24,7 @@ footer {
 }
 
 .icons {
-    color: rgba(0, 0, 255, 0.671);
+    display: none;
 }
 
 article.tweet .profile {
@@ -74,4 +74,10 @@ article:hover .firstLastName {
 
 article:hover .days {
     font-weight: 700;
+}
+
+article:hover .icons {
+    color: rgba(0, 0, 255, 0.671);
+    display: block;
+    opacity: 1;
 }

@@ -20,6 +20,11 @@ $(document).ready(function() {
           <div class="date">
           <p class="days">${moment(tweetData.created_at, "").fromNow()}</p>
           </div>
+          <div class="icons">
+          <i class="fa fa-retweet" aria-hidden="true"></i>
+          <i class="fa fa-flag" aria-hidden="true"></i>
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          </div>
         </footer>
         </article>
  `
@@ -37,23 +42,20 @@ $(document).ready(function() {
     }
 
     $('form').on('submit', function(event) {
-        // $(".error-message").slideUp();
         $(".error-message").empty();
         event.preventDefault();
         let tweetText = $('#tweet-text').val();
         let textLength = tweetText.length;
         const maxMsgLen = 140;
+
         if (tweetText === "" || tweetText === null) {
             $(".error-message").append('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>Please post some message, donot leave blank</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>');
             $(".error-message").slideDown("slow");
-            //setTimeOut(() => {
-            //
             return;
         }
         if (textLength > maxMsgLen) {
             $(".error-message").append('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>tweet content is too long, exceeded allowed maximum message limit</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>');
             $(".error-message").slideDown("slow");
-            // $(".error-message").slideUp();
             return;
         }
         if (textLength > 0 && textLength < 140) {

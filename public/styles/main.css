@@ -1,0 +1,21 @@
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (min-width: 1024px) {
+    .responsiveness {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px 0 0 0;
+    }
+    .main-header {
+        width: 30%;
+        float: left;
+    }
+    .container {
+        width: 50%;
+        float: right;
+    }
+    .main-header img {
+        margin: auto;
+    }
+}
