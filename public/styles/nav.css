@@ -31,11 +31,13 @@ nav {
     animation-name: iconbtn;
     animation-timing-function: ease-in-out;
     color: red;
-    size: medium;
+    /*size: medium;
     border-width: 20px 20px 0px 20px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #f00;
+    */
+    -webkit-text-stroke: 4px red;
 }
 
 @keyframes iconbtn {
