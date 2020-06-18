@@ -15,7 +15,7 @@ $(document).ready(function() {
           </div>
           <p class="uname">${tweetData.user.handle}</p>
         </header>
-          <p class="sentence">${tweetData.content.text}</p>
+          <p class="sentence">${escape(tweetData.content.text)}</p>
         <footer>
           <div class="date">
           <p class="days">${moment(tweetData.created_at, "").fromNow()}</p>
@@ -43,26 +43,26 @@ $(document).ready(function() {
         const maxMsgLen = 140;
         if (tweetText === "" || tweetText === null) {
             alert("Please post some message");
+            return;
         }
         if (textLength > maxMsgLen) {
-            alert("tweet content is too long, exceeded allowed maximum message limit")
+            alert("tweet content is too long, exceeded allowed maximum message limit");
+            return;
         }
-        let formData = $("form").serialize();
         if (textLength > 0 && textLength < 140) {
+            let formData = $("form").serialize();
             $.ajax({
-                url: "/tweets/",
-                method: "POST",
-                dataType: 'JSON',
-                data: formData
-            }).then(function(postsMessage) {
-                console.log(postsMessage);
-            });
-            alert("tweet is posted");
+                    url: "/tweets/",
+                    method: "POST",
+                    data: formData,
+                })
+                .then(loadtweets);
+            $('#tweet-text').val('');
         }
     })
     const loadtweets = () => {
         $.ajax({
-            url: `http://localhost:8080/tweets`,
+            url: `/tweets/`,
             method: "GET",
             dataType: 'JSON'
         }).then(function(tweetsresponse) {
@@ -70,5 +70,9 @@ $(document).ready(function() {
         })
     };
     loadtweets();
-
+    const escape = function(str) {
+        let div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
 });
