@@ -19,3 +19,8 @@ This repository is build upon to practice HTML, CSS, JS, jQuery and AJAX front-e
 
 - Express
 - Node 5.10.x or above
+## Responsive design.
+1. If an user clicks on "WRITE A NEW TWEET" the user will be directed to the tweet text section.
+2. If any user's mouse hovers over one of the tweets it gets highlighted and the text gets bolder with shadow effect.
+3. Word counter turns red if the maximum number of characters is crossed.
+4. Error shows up if tweet texts exceeds 140 characters and if there is no message are posted in the textarea.
