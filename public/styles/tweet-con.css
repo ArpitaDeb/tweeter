@@ -4,6 +4,9 @@ article.tweet {
     margin: 20px 0;
     width: 100%;
     background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 article.tweet header {

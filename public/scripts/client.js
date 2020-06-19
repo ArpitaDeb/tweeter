@@ -32,15 +32,15 @@ $(document).ready(function() {
     };
     //renderTweets
     const renderTweets = function(tweets) {
-        // loops through tweets
-        for (let element of tweets) {
-            // calls createTweetElement for each tweet
-            let $tweet = createTweetElement(element);
-            // takes return value and appends it to the tweets container
-            $("#tweets-container").prepend($tweet);
+            // loops through tweets
+            for (let element of tweets) {
+                // calls createTweetElement for each tweet
+                let $tweet = createTweetElement(element);
+                // takes return value and appends it to the tweets container
+                $("#tweets-container").prepend($tweet);
+            }
         }
-    }
-
+        //Compose Tweet
     $('form').on('submit', function(event) {
         $(".error-message").empty();
         event.preventDefault();
@@ -87,7 +87,7 @@ $(document).ready(function() {
             div.appendChild(document.createTextNode(str));
             return div.innerHTML;
         }
-        //compose tweet
+        //compose tweet arrow click fn
     $(".new-tweet").hide();
     $(".iconbtn").on("click", function() {
         $(".new-tweet").slideToggle("slow", "linear", function() {

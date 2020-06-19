@@ -1,11 +1,11 @@
 .main-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  width: 100%;
-  background-color:#ba8500;
-  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
-  color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    background-color: #ba8500;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    color: #ffffff;
 }

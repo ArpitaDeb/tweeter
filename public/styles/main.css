@@ -1,19 +1,46 @@
-@media only screen and (min-width: 1024px) {
+.responsiveness {
+    padding-top: 120px;
+}
+
+@media only screen and (min-width: 1025px) {
     .responsiveness {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 20px 0 0 0;
     }
     .main-header {
-        width: 30%;
+        width: 40%;
         float: left;
+        margin: 0 100px 0 0;
     }
     .container {
-        width: 50%;
+        width: 55%;
         float: right;
     }
-    .main-header img {
-        margin: auto;
+    .nav-header {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .main-header {
+        display: none;
+    }
+    nav {
+        position: relative;
+        height: initial;
+        padding: 20px 25px 0;
+        background-color: #ba8500;
+    }
+    .responsiveness {
+        padding-top: 0;
+    }
+    .nav-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
     }
 }

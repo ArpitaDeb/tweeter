@@ -25,6 +25,7 @@
     background-color: oldlace;
     padding: 10px;
     margin: .5em 0;
+    display: inline;
 }
 
 .new-tweet form {
