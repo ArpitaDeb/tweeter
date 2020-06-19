@@ -47,7 +47,7 @@ $(document).ready(function() {
         let tweetText = $('#tweet-text').val();
         let textLength = tweetText.length;
         const maxMsgLen = 140;
-
+        //msg validation
         if (tweetText === "" || tweetText === null) {
             $(".error-message").append('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>Please post some message, donot leave blank</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>');
             $(".error-message").slideDown("slow");
@@ -81,9 +81,17 @@ $(document).ready(function() {
         })
     };
     loadtweets();
+    //crossscripting XSS fn
     const escape = function(str) {
-        let div = document.createElement('div');
-        div.appendChild(document.createTextNode(str));
-        return div.innerHTML;
-    }
+            let div = document.createElement('div');
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+        //compose tweet
+    $(".new-tweet").hide();
+    $(".iconbtn").on("click", function() {
+        $(".new-tweet").slideToggle("slow", "linear", function() {
+            $(".formText").focus();
+        });
+    });
 });
