@@ -11,8 +11,11 @@ This repository is build upon to practice HTML, CSS, JS, jQuery and AJAX front-e
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Screenshots
+- tweet container
 !["Screenshot of tweet container"](https://github.com/ArpitaDeb/tweeter/blob/master/docs/tweetContainer.png?raw=true)
+- posted tweet
 !["Screenshot of posted tweet"](https://github.com/ArpitaDeb/tweeter/blob/master/docs/tweet.png?raw=true)
+- tweet compose box
 !["Screenshot of tweet compose box"](https://github.com/ArpitaDeb/tweeter/blob/master/docs/composetweet.png?raw=true)
 
 ## Dependencies
