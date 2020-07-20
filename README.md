@@ -15,7 +15,7 @@ This repository is build upon to practice HTML, CSS, JS, jQuery and AJAX front-e
 !["Screenshot of tweet container"](https://github.com/ArpitaDeb/tweeter/blob/master/docs/tweetContainer.png?raw=true)
 - posted tweet
 !["Screenshot of posted tweet"](https://github.com/ArpitaDeb/tweeter/blob/master/docs/tweet.png?raw=true)
-- tweet compose box
+- responsive tweet compose box
 !["Screenshot of tweet compose box"](https://github.com/ArpitaDeb/tweeter/blob/master/docs/tweetcompose.png?raw=true)
 
 ## Dependencies
