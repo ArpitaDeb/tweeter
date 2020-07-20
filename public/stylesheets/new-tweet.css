@@ -1,0 +1,54 @@
+.formSubmit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Bungee", cursive, sans-serif;
+  margin-top: 5px;
+}
+.formSubmit button {
+  background-color: #4056a1;
+  color: #ffffff;
+  border: none;
+}
+
+#tweet-text {
+  color: grey;
+  border-width: 0 0 5px 0;
+  border-style: solid;
+  border-color: gray;
+  resize: none;
+  width: 100%;
+  font-weight: 700;
+  line-height: 15px;
+  background: transparent;
+  background-color: oldlace;
+  padding: 10px;
+  margin: 0.5em 0;
+  display: inline;
+}
+
+.container {
+  margin-top: 25px;
+}
+
+.new-tweet form {
+  padding: 20px;
+  background-color: oldlace;
+  margin-top: 25px;
+}
+
+section h2 {
+  border-bottom: 1px solid gray;
+}
+
+.charlimit {
+  color: red;
+}
+
+.error-message {
+  color: red;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=new-tweet.css.map */

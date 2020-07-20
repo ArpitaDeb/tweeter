@@ -1,0 +1,51 @@
+nav {
+  font-family: "Bungee", cursive, sans-serif;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 2em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon span {
+  font-size: medium;
+}
+
+.iconbtn {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin-top: 10px;
+  transform-origin: bottom;
+  animation-name: iconbtn;
+  animation-timing-function: ease-in-out;
+  -webkit-text-stroke: 4px red;
+}
+
+@keyframes iconbtn {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.iconbtn:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=nav.css.map */

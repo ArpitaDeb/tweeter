@@ -1,0 +1,16 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+  background-color: #ba8500;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  color: #ffffff;
+}
+.main-header h2 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=header.css.map */

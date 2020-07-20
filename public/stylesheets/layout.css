@@ -3,39 +3,36 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
-
 
 /*
  * Global layout stuff
  */
-
 body {
-    color: #545149;
-    background-color: #f4f1ec;
-    font-size: 24px;
-    font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 main {
-    width: 100%;
-    background-color: #f4f1ec;
+  width: 100%;
+  background-color: #f4f1ec;
 }
+
+/*# sourceMappingURL=layout.css.map */

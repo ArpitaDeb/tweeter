@@ -1,0 +1,15 @@
+@import "./mixins.scss";
+.main-header {
+  display: flex;
+  align-items: center;
+  @include alignVerticalCrossAxis();
+  height: 400px;
+  width: 100%;
+  background-color: #ba8500;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  color: #ffffff;
+
+  h2 {
+    margin: 0;
+  }
+}
